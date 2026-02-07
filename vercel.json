@@ -1,6 +1,10 @@
 {
   "functions": {
-    "api/index.py": { "runtime": "python3.10" }
+    "api/index.py": {
+      "runtime": "@vercel/python"
+    }
   },
-  "routes": [{ "src": "/api/(.*)", "dest": "api/index.py" }]
+  "routes": [
+    { "src": "/api/(.*)", "dest": "/api/index.py" }
+  ]
 }
